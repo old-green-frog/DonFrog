@@ -7,7 +7,8 @@ type String string
 
 type Utils interface {
 	Parse(name string)
-	Add()
+	PLusAdd()
+	Equal()
 }
 
 var MainName string
@@ -26,7 +27,7 @@ func (s String) Parse(name string)  { StrVars[name] = s }
 //
 //
 
-func (i *Integer) Add(val interface{}) {
+func (i *Integer) PlusAdd(val interface{}) {
 
 	if v, t := val.(Integer); t {
 		*i += v
@@ -35,7 +36,7 @@ func (i *Integer) Add(val interface{}) {
 	}
 
 }
-func (f *Float) Add(val interface{}) {
+func (f *Float) PlusAdd(val interface{}) {
 
 	if v, t := val.(Float); t {
 		*f += v
@@ -44,7 +45,7 @@ func (f *Float) Add(val interface{}) {
 	}
 
 }
-func (s *String) Add(val interface{}) {
+func (s *String) PlusAdd(val interface{}) {
 
 	if v, t := val.(String); t {
 		*s += v
