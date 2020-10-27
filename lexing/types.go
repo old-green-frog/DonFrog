@@ -8,7 +8,6 @@ type String string
 type Utils interface {
 	Parse(name string)
 	PLusAdd()
-	Equal()
 }
 
 var MainName string
